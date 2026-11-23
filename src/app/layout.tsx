@@ -13,7 +13,6 @@ export const metadata: Metadata = {
   title: "CIShifts — Facility Scheduler",
   description:
     "Interactive prototype of the CIShifts clinic dashboard: sign up, log in, and manage CNA shifts on a live calendar. Designed and built by Chris Paynaganan.",
-  icons: { icon: "/assets/favicon.png" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

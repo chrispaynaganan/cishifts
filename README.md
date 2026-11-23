@@ -3,6 +3,8 @@
 A clickable, animated build of the **CIShifts clinic / facility desktop app**, made from the
 `[OFFICIAL] CIShifts Design` Figma file so recruiters can explore it instead of looking at static frames.
 
+**Live:** https://cishifts.vercel.app
+
 It covers all 19 desktop frames:
 
 | Flow | Figma frames | What you can do |
