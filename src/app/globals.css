@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/*
+ * CIShifts design tokens, lifted from the Figma file (Desktop page).
+ * Everything is a named token so components use canonical Tailwind classes only.
+ */
+@theme {
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+
+  /* Type scale (sizes not covered by Tailwind defaults) */
+  --text-2xs: 0.6875rem; /* 11px — calendar chips */
+  --text-2xs--line-height: normal;
+  --text-month: 2rem; /* 32px — "July 2023" */
+  --text-month--line-height: normal;
+  --text-display: 2.5rem; /* 40px — "Hello there!" */
+  --text-display--line-height: normal;
+  --text-hero: 5rem; /* 80px — "Holistic Care, Redefined." */
+  --text-hero--line-height: 5.375rem;
+
+  --tracking-ui: -0.5px;
+  --tracking-title: -0.72px;
+  --tracking-display: -1px;
+  --tracking-month: -2px;
+
+  /* Brand */
+  --color-brand: #d42704;
+  --color-brand-bright: #e1300d;
+  --color-brand-today: #de2d0a;
+  --color-brand-orange: #ff5702;
+  --color-brand-deep: #c24202;
+  --color-brand-tint: #ffe0da;
+  --color-brand-urgent-text: #bf4102;
+
+  /* Neutrals */
+  --color-ink: #121010;
+  --color-ink-month: #1d1d1d;
+  --color-ink-strong: #292929;
+  --color-ink-body: #3c3c3c;
+  --color-ink-soft: #2e2e2e;
+  --color-ink-pill: #2f2f2f;
+  --color-muted: #767676;
+  --color-muted-2: #696969;
+  --color-muted-3: #727272;
+  --color-muted-4: #707070;
+  --color-placeholder: #787575;
+  --color-legend: #534e4c;
+  --color-field: #f8f8f8;
+  --color-surface: #f5f5f5;
+  --color-notif: #faf8f8;
+  --color-line: #eaeaea;
+  --color-line-grid: #e2e2e2;
+  --color-line-side: #ededed;
+  --color-line-copy: #e9e9e9;
+  --color-input-border: #949494;
+  --color-field-focus: #c1c1c1;
+
+  /* Status */
+  --color-facebook: #316ff6;
+  --color-payment: #2b5ecb;
+  --color-success: #1a8000;
+  --color-success-ring: #22ab00;
+  --color-available: #4e9734;
+  --color-danger: #cd0000;
+
+  /* Calendar chip palettes */
+  --color-chip-done: #f1f1f1;
+  --color-chip-done-fg: #6d6d6d;
+  --color-chip-live: #ffebde;
+  --color-chip-live-fg: #be4c00;
+  --color-chip-sched: #edf5eb;
+  --color-chip-sched-fg: #1a8000;
+  --color-chip-open: #ecf2f7;
+  --color-chip-open-fg: #006dc7;
+  --color-chip-called: #feeff7;
+  --color-chip-called-fg: #d40074;
+  --color-chip-urgent: #feeaea;
+  --color-chip-urgent-fg: #cd0000;
+
+  /* Radii */
+  --radius-check: 5px;
+  --radius-hero: 3rem;
+
+  /* Elevation */
+  --shadow-soft: 0 2px 6px 0 rgb(0 0 0 / 0.06);
+  --shadow-panel: 0 45px 86px 0 rgb(0 0 0 / 0.15);
+  --shadow-field: 0 0 3px 0 rgb(0 0 0 / 0.25);
+  --drop-shadow-popover: 0 45px 43px rgb(0 0 0 / 0.15);
+
+  /* Layout */
+  --spacing-sidebar: 17.5rem; /* 280px */
+
+  --animate-ken-burns: ken-burns 24s ease-in-out infinite alternate;
+  --animate-ping-slow: ping-slow 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+  --animate-shimmer: shimmer 1.6s linear infinite;
+
+  @keyframes ken-burns {
+    from {
+      transform: scale(1.02) translate3d(0, 0, 0);
+    }
+    to {
+      transform: scale(1.12) translate3d(-1.5%, -1%, 0);
+    }
+  }
+  @keyframes ping-slow {
+    0% {
+      transform: scale(1);
+      opacity: 0.55;
+    }
+    80%,
+    100% {
+      transform: scale(2.1);
+      opacity: 0;
+    }
+  }
+  @keyframes shimmer {
+    from {
+      background-position: 200% 0;
+    }
+    to {
+      background-position: -200% 0;
+    }
+  }
+}
+
+@layer base {
+  html,
+  body {
+    @apply bg-white text-ink antialiased;
+  }
+  body {
+    font-optical-sizing: auto;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+  ::selection {
+    @apply bg-brand-tint text-brand;
+  }
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility text-trim {
+  text-box: trim-both cap alphabetic;
+}
+
+@utility bg-shimmer {
+  background-image: linear-gradient(90deg, transparent 0%, rgb(255 255 255 / 0.22) 50%, transparent 100%);
+  background-size: 200% 100%;
+}
