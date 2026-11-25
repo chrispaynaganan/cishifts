@@ -1,9 +1,9 @@
-# CIShifts — Facility Scheduler (interactive prototype)
+# CIShifts — Facility Scheduler + Nurse App (interactive prototype)
 
 A clickable, animated build of the **CIShifts clinic / facility desktop app**, made from the
 `[OFFICIAL] CIShifts Design` Figma file so recruiters can explore it instead of looking at static frames.
 
-**Live:** https://cishifts.vercel.app
+**Live:** https://cishifts.vercel.app · Nurse app: https://cishifts.vercel.app/nurse
 
 It covers all 19 desktop frames:
 
@@ -24,6 +24,24 @@ It covers all 19 desktop frames:
 
 Extras for exploring: search (filters chips live), recent-activity log, legend, "View N more shifts",
 and a small **Explore the prototype** checklist in the corner.
+
+## Nurse mobile app (`/nurse`)
+
+The CNA side, built from the 18 mobile frames (15 screens, the call-off modal and both toasts).
+On desktop it sits in a phone frame next to a short "Things to try" guide; on a phone it runs full screen.
+The clinic dashboard's **CNA Calendar** button opens it.
+
+| Flow | What you can do |
+| --- | --- |
+| Home | Greeting with today's shift count, upcoming / history, open shifts carousel with save (heart) |
+| Open Shifts / My Shifts | Search, AM / PM / NOC / urgent filters, All / Accepted and Active / History tabs |
+| Shift Details | Schedule, Location (copy address, Google / Apple Maps), Match Criteria, Facility; Accept / Decline |
+| Urgent shift | Pink incentive banner; a "someone cancelled" notification drops in a few seconds after Home loads |
+| Accepted shift | Green confirmation, live countdown, duties checklist with filters, journal |
+| Clock in | Locked until 5 minutes before the shift (shows the "You cannot clock in yet" toast); a demo link skips ahead |
+| On shift | Live timer, meal break with a 30-minute countdown, clock out |
+| Shift Summary | Biometrics, tasks, mileage, expenses; **Confirm and Download** saves a text summary |
+| Call off | "Calling Off Reasons" modal; the shift goes back to the pool as urgent |
 
 ## Run it
 

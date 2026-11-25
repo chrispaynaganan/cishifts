@@ -76,14 +76,55 @@
   --color-chip-urgent: #feeaea;
   --color-chip-urgent-fg: #cd0000;
 
+  /* Nurse mobile app */
+  --text-3xs: 0.625rem; /* 10px */
+  --text-3xs--line-height: normal;
+  --text-title: 1.625rem; /* 26px screen titles */
+  --text-title--line-height: normal;
+  --text-greeting: 2.5625rem; /* 41px */
+  --text-greeting--line-height: 3.125rem;
+  --tracking-tightest: -0.04em;
+  --tracking-heading: -0.03em;
+  --tracking-snug: -0.02em;
+
+  --color-n-ink: #2b2b2b;
+  --color-n-ink-2: #262626;
+  --color-n-greeting: #585858;
+  --color-n-tab: #484848;
+  --color-n-search: #f3f3f3;
+  --color-n-search-text: #6f6f6f;
+  --color-n-tab-idle: #afafaf;
+  --color-n-chip: #f6f6f6;
+  --color-n-chip-text: #717171;
+  --color-n-card: #e0e0e0;
+  --color-n-card-2: #f2f2f2;
+  --color-n-tag: #ffece2;
+  --color-n-tag-soft: #fff6f1;
+  --color-n-filter: #ffd9c6;
+  --color-n-urgent: #d64b44;
+  --color-n-urgent-bg: #ffeeee;
+  --color-n-urgent-text: #c84d4d;
+  --color-n-accepted: #418728;
+  --color-n-break: #ba8e19;
+  --color-n-disabled: #eaeaea;
+  --color-n-pill: #f4f4f4;
+
   /* Radii */
   --radius-check: 5px;
   --radius-hero: 3rem;
+  --radius-device: 4.25rem;
+  --radius-screen: 3.5rem;
 
   /* Elevation */
   --shadow-soft: 0 2px 6px 0 rgb(0 0 0 / 0.06);
   --shadow-panel: 0 45px 86px 0 rgb(0 0 0 / 0.15);
   --shadow-field: 0 0 3px 0 rgb(0 0 0 / 0.25);
+  --shadow-icon: 0 4px 10px 0 rgb(0 0 0 / 0.15);
+  --shadow-tabbar: 0 6px 12px 0 rgb(0 0 0 / 0.06);
+  --shadow-modal: 0 -8px 45px 0 rgb(0 0 0 / 0.15);
+  --shadow-device: 0 40px 80px -20px rgb(0 0 0 / 0.35);
+  --drop-shadow-toast: 0 5px 10px rgb(0 0 0 / 0.23);
+  --drop-shadow-btn: 0 6px 5px rgb(0 0 0 / 0.07);
   --drop-shadow-popover: 0 45px 43px rgb(0 0 0 / 0.15);
 
   /* Layout */

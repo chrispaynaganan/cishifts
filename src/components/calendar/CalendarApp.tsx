@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ToastProvider, useToast } from "@/components/ui/toast";
 import {
@@ -348,15 +349,14 @@ function CalendarInner() {
                     onClick={() => setPop((p) => (p?.kind === "history" ? null : { kind: "history" }))}
                   />
                 </div>
-                <button
-                  type="button"
-                  onClick={() => toast("The CNA calendar lives in the nurse mobile app — coming next in this case study.")}
+                <Link
+                  href="/nurse"
                   className="flex min-w-33.5 items-center rounded-full bg-white/10 p-1.25 whitespace-nowrap shadow-soft transition-shadow hover:shadow-md"
                 >
                   <span className="flex flex-1 items-center justify-center rounded-full px-4 py-3 text-base leading-none text-ink-pill text-trim">
                     CNA Calendar
                   </span>
-                </button>
+                </Link>
                 <motion.button
                   type="button"
                   data-keep-pop
